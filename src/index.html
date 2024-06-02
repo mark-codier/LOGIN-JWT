@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script defer src="https://kit.fontawesome.com/1d8ca4d97d.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="login-page-wrapp d-flex">
+      <!-- ////////////////////////////////////////////////////////////////// -->
+      <div id="loginForm" class="login-form-wrap d-flex align-items-center">
+        <div class="form-card card ml-auto">
+          <div class="card-body">
+            <h4 class="card-title">Please Login</h4>
+            <form name="loginForm">
+              <div class="form-group">
+                <label style="position: relative;" for="email">Email address</label>
+                <input
+                value="maria@mail.com"
+                style="position: relative;"
+                  type=""
+                  class="form-control"
+                  id="log_email"
+                  aria-describedby="emailHelp"
+                  placeholder="Enter email"
+                  data-required="email"
+                  data-invalid-message="Please provide valid email example@example.com"
+                />
+              </div>
+              <div class="form-group">
+                <label style="position: relative;" for="password">Password</label>
+                <input
+                value="12345"
+                style="position: relative;"
+                  type="password"
+                  class="form-control"
+                  id="log_password"
+                  placeholder="Password"
+                  data-required="password"
+                />
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- ///////////////////////////////////////////////////////////////////////// -->
+      <div id="signUpForm" class="login-form-wrap d-none align-items-center ">
+        <div class="form-card card ml-auto">
+          <div class="card-body">
+            <h4 class="card-title">Please Sign up</h4>
+            <form name="signUpForm">
+              <div class="form-group">
+                <label style="position: relative;" for="email">Email address</label>
+                <input
+                value="mwegener546@gmail.com"
+                style="position: relative;"
+                  type=""
+                  class="form-control"
+                  id="sign_email"
+                  aria-describedby="emailHelp"
+                  placeholder="Enter email"
+                  data-required="email"
+                  data-invalid-message="Please provide valid email example@example.com"
+                />
+              </div>
+              <div class="form-group">
+                <label style="position: relative;" for="name">Name</label>
+                <input
+                value="Mark"
+                style="position: relative;"
+                type=""
+                class="form-control"
+                id="sign_name"
+                placeholder="Name"
+                data-required="text"
+                />
+              </div>
+              <div class="form-group">
+                <label style="position: relative;" for="password">Password</label>
+                <input
+                value="12345"
+                style="position: relative;"
+                type="password"
+                class="form-control"
+                id="sign_password"
+                placeholder="Password"
+                data-required="password"
+                />
+              </div>
+              <div class="form-group">
+                <label style="position: relative;" for="">Role</label>
+                <input
+                value="customer"
+                style="position: relative;"
+                type=""
+                class="form-control"
+                id="sign_role"
+                placeholder="Role"
+                data-required=""
+                />
+              </div>
+              <div class="form-group">
+                <label style="position: relative;" for="">Avatar</label>
+                <input
+                value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxgSNX8Z8PDKfyAQHsAQai9UWjHX4JIocq_gZ5Y8wVKQ&s"
+                style="position: relative;"
+                type=""
+                class="form-control"
+                id="sign_avatar"
+                placeholder="Avatar"
+                data-required="avatarUrl"
+                />
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- /////////////////////////////////////////////////////////////////////////////// -->
+      <!-- /.login-form-wrap -->
+      <div class="login-greeting-screen d-flex align-items-center">
+        <div class="login-greeting-screen-text">
+          <h1 class="login-greeting-screen-title">Welcome to my app</h1>
+          <p class="login-greeting-screen-description">
+            <button id="sign_btn" class="btn btn-primary text-light">You can click here for change form</button>
+          </p>
+        </div>
+      </div>
+      <!-- /.login-greeting-screen -->
+    </div>
+    <!-- /.login-page-wrapp -->
+    <div class="toast_container">
+      
+    </div>
+    <!-- ////////////////////////////////////////////////////////////////////////////////// -->
+  </body>
+</html>

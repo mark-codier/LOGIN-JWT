@@ -1,0 +1,96 @@
+.d-none{
+  display: none;
+}
+p{
+  margin-bottom: 0;
+}
+.login-page-wrapp {
+  height: 100vh;
+}
+
+.login-form-wrap {
+  width: 50%;
+}
+
+.login-form-wrap .form-card {
+  max-width: 500px;
+  width: 100%;
+  margin-right: 30px;
+}
+
+.login-form-wrap .form-card .card-title {
+  color: var(--gray);
+}
+
+.login-greeting-screen {
+  background: var(--teal);
+  width: 50%;
+  padding: 20px;
+}
+
+.login-greeting-screen .login-greeting-screen-text {
+  max-width: 500px;
+}
+
+.login-greeting-screen .login-greeting-screen-text {
+  color: var(--white);
+}
+
+.login-greeting-screen .login-greeting-screen-title {
+  margin-bottom: 30px;
+  text-transform: capitalize;
+}
+
+.login-greeting-screen .login-greeting-screen-description {
+  line-height: 1.4;
+}
+.form-group{
+  display: flex;
+  flex-direction: column;
+}
+.toast_container{
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 10px;
+  padding: 5px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  overflow-x: hidden;
+}
+.toaster-successful{
+  background: rgb(139, 220, 166);
+  border-left: 5px rgb(11, 126, 51) solid;
+  color: black;
+}
+.toaster-failed{
+  background-color: rgb(215, 131, 131);
+  border-left: 5px #bb3030 solid;
+  color: white;
+}
+.toaster{
+  animation: Toaster 1s 1;
+  border-radius: 3px;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 2s ease-out;
+}
+.removedToaster{
+  transform: translateX(20vw);
+}
+@keyframes Toaster{
+  0%{
+    opacity: 0;
+    transform: scale(0.1);
+  }
+  100%{
+    transform: scale(1);
+    opacity: 1
+  }
+}
