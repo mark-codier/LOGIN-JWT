@@ -1,23 +1,20 @@
-import Axios from "axios";
+import instance from "../plugins/axios";
 class Toaster{
     constructor(){
         this.toastContainer = document.body.querySelector('.toast_container')
     }
     async errorToaster(){
-        console.log(Toaster.errorDiv())
         this.toastContainer.insertAdjacentHTML('afterbegin',Toaster.errorDiv())
         const toastDiv = this.toastContainer.firstElementChild
         toastDiv.addEventListener('transitionend',()=>{toastDiv.remove()})
         await setTimeout(()=>{toastDiv.classList.add('removedToaster')},3000)
     }
     async successToaster(){
-        console.log(Toaster.successDiv())
         this.toastContainer.insertAdjacentHTML('afterbegin',Toaster.successDiv())
         const toastDiv = this.toastContainer.firstElementChild
         toastDiv.addEventListener('transitionend',()=>{toastDiv.remove()})
         await setTimeout(()=>{toastDiv.classList.add('removedToaster')},3000)
-    }
-     
+    }            
     static successDiv(){
         return `
             <div class="toaster-successful toaster">
@@ -49,21 +46,17 @@ export async function login(inputs){
             acc[inp[0]] = inp[1].value
             return acc;
         },{});
-            console.log(postObj)
             if(Object.values(postObj).length<3){
-                const response = await Axios.post('https://api.escuelajs.co/api/v1/auth/login',postObj)
-                     console.log(response)
+                const response = await instance.post('/auth/login',postObj)
                      response.status < 300 ? toaster.successToaster() : toaster.errorToaster()
                      return response.data;
             }else{
-                const response = await Axios.post('https://api.escuelajs.co/api/v1/users/',postObj)
-                     console.log(response)
+                const response = await instance.post('/users/',postObj)
                      response.status < 300 ? toaster.successToaster() : toaster.errorToaster()
                      return response.data;
             }
     } catch (err) {
         console.error(err)   
         // Promise.reject(err)
-    }
-      
+    }  
 }

@@ -30,3 +30,11 @@ async function onSubmit(inputs) {
     });
     isValid ? console.log(await login(inputs)) : 0;
 }
+// async function accessToken(){ try {
+    //     const response = await Axios.get('https://api.escuelajs.co/api/v1/auth/profile',{
+        //         headers:{'Authorization' : 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsImlhdCI6MTcxNzMwMzczMiwiZXhwIjoxNzE5MDMxNzMyfQ.McU_KMDrN6OzTsA4BoFn03B3yADYmJDTLK3VDeM-c_4'}
+        //     }).then(res => console.log(res))
+        // } catch (err) {
+//     Promise.reject(err)
+// }}
+// accessToken()

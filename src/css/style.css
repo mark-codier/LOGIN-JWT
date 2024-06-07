@@ -82,7 +82,7 @@ p{
   transition: 2s ease-out;
 }
 .removedToaster{
-  transform: translateX(20vw);
+  transform: translateX(110%);
 }
 @keyframes Toaster{
   0%{
